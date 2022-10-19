@@ -1855,6 +1855,36 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@decidables/igt-elements@workspace:libraries/igt-elements":
+  version: 0.0.0-use.local
+  resolution: "@decidables/igt-elements@workspace:libraries/igt-elements"
+  dependencies:
+    "@decidables/decidables-elements": ^0.3.2
+    "@web/test-runner": ^0.13.27
+    d3: ^7.4.4
+    gulp: ^4.0.2
+    jstat: ^1.9.5
+    lit: ^2.2.2
+  languageName: unknown
+  linkType: soft
+
+"@decidables/igt@workspace:sites/igt":
+  version: 0.0.0-use.local
+  resolution: "@decidables/igt@workspace:sites/igt"
+  dependencies:
+    "@decidables/detectable-elements": ^0.2.2
+    bootstrap: ^5.1.3
+    bootstrap-icons: ^1.8.1
+    core-js: ^3.22.3
+    gulp: ^4.0.2
+    lit: ^2.2.2
+    regenerator-runtime: ^0.13.9
+    source-code-pro: ^2.38.0
+    source-sans: ^3.46.0
+    source-serif: ^4.4.0
+  languageName: unknown
+  linkType: soft
+
 "@decidables/prospectable-elements@^0.2.2, @decidables/prospectable-elements@workspace:libraries/prospectable-elements":
   version: 0.0.0-use.local
   resolution: "@decidables/prospectable-elements@workspace:libraries/prospectable-elements"

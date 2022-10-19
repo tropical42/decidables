@@ -1,0 +1,64 @@
+{
+  "name": "@decidables/igt-elements",
+  "version": "0.0.1",
+  "description": "TODO",
+  "keywords": [
+    "web component",
+    "explorable explanation",
+    "explorable",
+    "decision making",
+    "decidables",
+    "signal detection theory",
+    "receiver operating characteristic",
+    "roc",
+    "random dot kinematogram",
+    "detectable"
+  ],
+  "type": "module",
+  "main": "./lib/igtElements.umd.min.js",
+  "browser": "./lib/igtElements.umd.min.js",
+  "module": "./lib/igtElements.esm.min.js",
+  "exports": {
+    "./lib/*.js": "./lib/*.js",
+    ".": "./src/index.js",
+    "./components": "./src/components/index.js",
+    "./equations": "./src/equations/index.js",
+    "./examples": "./src/examples/index.js",
+    "./*": "./src/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/decidables/decidables.git",
+    "directory": "libraries/igt-elements"
+  },
+  "bugs": "https://github.com/decidables/decidables/issues",
+  "homepage": "https://github.com/decidables/decidables/tree/main/libraries/igt-elements",
+  "author": "Jack Novinger",
+  "license": "CC-BY-SA-4.0 AND GPL-3.0-or-later",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "package.json",
+    "*.md",
+    "src",
+    "lib"
+  ],
+  "scripts": {
+    "lint": "gulp lint",
+    "test": "web-test-runner test/**/*.test.js --config ../../.webtestrunnerrc.js",
+    "test:watch": "web-test-runner test/**/*.test.js --config ../../.webtestrunnerrc.js --watch",
+    "test:file": "web-test-runner $@ --config ../../.webtestrunnerrc.js",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "@web/test-runner": "^0.13.27",
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "@decidables/decidables-elements": "^0.3.2",
+    "d3": "^7.4.4",
+    "jstat": "^1.9.5",
+    "lit": "^2.2.2"
+  }
+}
