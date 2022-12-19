@@ -1,0 +1,522 @@
+<!doctype html>
+<html class="det-html" lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="IGT: Fitting">
+    <meta name="author" content="Jack Novinger">
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <title>IGT: Model Fitting</title>
+
+    <link href="page.css" rel="stylesheet">
+  </head>
+  <body class="det-body">
+    <div class="det-page">
+      <div class="det-layout">
+
+        <div class="det-sidebar">
+          <div class="det-nav-group">
+            <div class="det-nav-top">
+              <button class="det-nav-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#det-nav" aria-controls="det-nav" aria-expanded="false" aria-label="Toggle table of contents">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
+              </button>
+              <a class="det-nav-brand" href="index.html">
+                <span class="detectable">IGT</span>
+              </a>
+            </div>
+            <nav class="det-nav-collapse collapse" id="det-nav">
+              <ol class="det-toc">
+                
+                  <li class="det-toc-list">
+                    
+                    <ol class="det-toc-section det-toc-section-introduction">
+                      
+                        
+                          <li class="det-toc-item">
+                        
+                            <a class="det-toc-link" href="index.html">
+                              Home
+                            </a>
+                          </li>
+                      
+                        
+                          <li class="det-toc-item">
+                        
+                            <a class="det-toc-link" href="introduction.html">
+                              Introduction
+                            </a>
+                          </li>
+                      
+                    </ol>
+                  </li>
+                
+                  <li class="det-toc-list">
+                    
+                      <div class="det-toc-section-name">Model</div>
+                    
+                    <ol class="det-toc-section det-toc-section-model">
+                      
+                        
+                          <li class="det-toc-item">
+                        
+                            <a class="det-toc-link" href="exploration.html">
+                              Model Exploration
+                            </a>
+                          </li>
+                      
+                        
+                          <li class="det-toc-item det-toc-item-active">
+                        
+                            <a class="det-toc-link" href="fitting.html">
+                              Model Fitting
+                            </a>
+                          </li>
+                      
+                    </ol>
+                  </li>
+                
+                  <li class="det-toc-list">
+                    
+                      <div class="det-toc-section-name">Theory</div>
+                    
+                    <ol class="det-toc-section det-toc-section-theory">
+                      
+                        
+                          <li class="det-toc-item">
+                        
+                            <a class="det-toc-link" href="theory.html">
+                              Theory
+                            </a>
+                          </li>
+                      
+                        
+                          <li class="det-toc-item">
+                        
+                            <a class="det-toc-link" href="additional_res.html">
+                              Additional Research
+                            </a>
+                          </li>
+                      
+                    </ol>
+                  </li>
+                
+                  <li class="det-toc-list">
+                    
+                    <ol class="det-toc-section det-toc-section-conclusion">
+                      
+                        
+                          <li class="det-toc-item">
+                        
+                            <a class="det-toc-link" href="conclusion.html">
+                              Conclusion
+                            </a>
+                          </li>
+                      
+                    </ol>
+                  </li>
+                
+                  <li class="det-toc-list">
+                    
+                      <div class="det-toc-section-name">Resources</div>
+                    
+                    <ol class="det-toc-section det-toc-section-resources">
+                      
+                        
+                          <li class="det-toc-item">
+                        
+                            <a class="det-toc-link" href="references.html">
+                              References
+                            </a>
+                          </li>
+                      
+                    </ol>
+                  </li>
+                
+                <li class="det-toc-list">
+                  <div class="det-toc-section-name"></div>
+                  <ol class="det-toc-section det-toc-section-external">
+                    <li class="det-toc-item">
+                      <a class="det-toc-link" href="https://github.com/decidables/decidables/releases/tag/%40decidables%2Fdetectable%400.0.1" target="_blank" rel="noopener">
+                        v0.0.1
+                      </a>
+                    </li>
+                    <li class="det-toc-item">
+                      <a class="det-toc-link" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">
+                        CC-BY-SA-4.0
+                      </a>
+                    </li>
+                    <li class="det-toc-item">
+                      <a class="det-toc-link" href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">
+                        GPL-3.0-or-later
+                      </a>
+                    </li>
+                    <li class="det-toc-item">
+                      <a class="det-toc-link" href="https://github.com/decidables/decidables/tree/main/sites/detectable" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+</svg>
+                      </a>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </nav>
+          </div>
+          <div class="det-nav-bottom">
+            <a class="det-nav-decidables" href="../"><span class="decidables">decidables</span></a>
+          </div>
+        </div>
+
+        <main class="det-main">
+          
+            <header class="det-header">
+              <h1 class="det-title">Fitting</h1>
+            </header>
+          
+          <section class="det-content">
+            <h2>Parameters of the Iowa Gambling Task</h2>
+<p>Congratulations on completing the IGT! Hopefully you were able to make some money during your attempt. At any point, you may navigate back to the <em>exploration</em> page to give it another try.</p>
+<p>To clarify, the graph that was produced throughout the trials was a running visualization of what was happening during your attempt. The <a href="glossary.html#x-axis" class="term">x-axis</a> presented the number of trials, while the <a href="glossary.html#y-axis" class="term">y-axis</a> denoted the deck selections that were made on each trial. Each of the dots on the graph produced are colored such that the shades of green represent the wins and the shades of yellow-red represent losses.</p>
+<h2>The Losers</h2>
+<p>You may have been able to detect that decks 1 &#x26; 2 produce a long-term loss, although initially they have large gains. Deck 1 has a mixture of gains and losses, where the losses are substantial but perhaps insignificant if undetected.
+<img src="deck_1.png"></p>
+<p>Deck 2 produces long stretches of profit before presenting a significant loss on some of the trials.
+<img src="deck_2.png"></p>
+<h2>The Winners</h2>
+<p>Perhaps not as exciting, decks 3 &#x26; 4 produce a long-term profit. Deck 3 behaves almost like Deck 1, however the gains and losses aren’t as significant.
+<img src="deck_3.png"></p>
+<p>Similarly, Deck 4 is almost a copy of Deck 2. It produces a profit with insignificant losses on some of the trials.
+<img src="deck_4.png"></p>
+<h2>Data</h2>
+<p>Below is a table where you can look into the setup of the model. Each deck on each trial will present the positive number as a gain and the negative number as a loss.</p>
+<table class="decks">
+  <tr>
+    <td class="text-center">&nbsp;</td>
+    <th>Deck 1</th>
+    <th>Deck 2</th>
+    <th>Deck 3</th>
+    <th>Deck 4</th>
+  </tr>
+  <tr>
+    <td class="text-center">Trial 1</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 2</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 3</td>
+    <td class="text-center">100, -150</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 4</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 5</td>
+    <td class="text-center">100, -300</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 6</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 7</td>
+    <td class="text-center">100, -200</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 8</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 9</td>
+    <td class="text-center">100, -250</td>
+    <td class="text-center">100, -1250</td>
+    <td class="text-center">50, -50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 10</td>
+    <td class="text-center">100, -350</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -50</td>
+    <td class="text-center">50, -250</td>
+  </tr>
+  <tr>
+    <td class="text-center">Trial 11</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 12</td>
+    <td class="text-center">100, -350</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -25</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 13</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -75</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 14</td>
+    <td class="text-center">100, -250</td>
+    <td class="text-center">100, -1250</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 15</td>
+    <td class="text-center">100, -200</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 16</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 17</td>
+    <td class="text-center">100, -300</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -25</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 18</td>
+    <td class="text-center">100, -150</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -75</td>
+    <td class="text-center">50</td>
+  </tr> 
+   <tr>
+    <td class="text-center">Trial 19</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 20</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -50</td>
+    <td class="text-center">50, -250</td>
+  </tr>
+  <tr>
+    <td class="text-center">Trial 21</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100, -1250</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 22</td>
+    <td class="text-center">100,-300</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 23</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 24</td>
+    <td class="text-center">100, -350</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 25</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -25</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 26</td>
+    <td class="text-center">100, -200</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 27</td>
+    <td class="text-center">100, -250</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 28</td>
+    <td class="text-center">100, -150</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 29</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -75</td>
+    <td class="text-center">50, -250</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 30</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 31</td>
+    <td class="text-center">100, -350</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 32</td>
+    <td class="text-center">100, -200</td>
+    <td class="text-center">100, -1250</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 33</td>
+    <td class="text-center">100, -250</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 34</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -25</td>
+    <td class="text-center">50</td>
+  </tr>
+  <tr>
+    <td class="text-center">Trial 35</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -25</td>
+    <td class="text-center">50, -250</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 36</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 37</td>
+    <td class="text-center">100, -150</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50, -75</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 38</td>
+    <td class="text-center">100, -300</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 39</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50,-50</td>
+  </tr>
+   <tr>
+    <td class="text-center">Trial 40</td>
+    <td class="text-center">100</td>
+    <td class="text-center">100</td>
+    <td class="text-center">50</td>
+    <td class="text-center">50,-75</td>
+  </tr>
+</table>
+
+          </section>
+
+          <footer class="det-footer">
+            <div class="det-footer-item det-footer-item-left">
+              
+                
+                <a class="det-toc-link" href="exploration.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+</svg>
+                  Model Exploration
+                </a>
+              
+            </div>
+            <div class="det-footer-item det-footer-item-right">
+              
+                
+                <a class="det-toc-link" href="theory.html">
+                  Theory
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+</svg>
+                </a>
+              
+            </div>
+          </footer>
+        </main>
+
+      </div>
+    </div>
+    <script type="module" src="page.js"></script>
+  </body>
+</html>

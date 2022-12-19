@@ -47,10 +47,17 @@ export const compileFonts = compiles.compileFontsTask([
   'source-serif/WOFF{,2}/VAR/SourceSerif4Variable-{Roman,Italic}.otf.woff{,2}',
 ]);
 
+export function compileimages(){
+  gulp.src('src/*.png')
+  .pipe(gulp.dest('local'));
+
+}
+
 export const compile = gulp.series(
   cleans.cleanLocal,
   gulp.parallel(
   //  compileFavicons,
+    compileimages,
     compileFonts,
     compiles.compileMarkdown,
     compiles.compileScripts,
@@ -60,12 +67,18 @@ export const compile = gulp.series(
 
 export const watchLibraries = watches.watchLibrariesTask([
   'decidables-elements',
-  'detectable-math',
-  'detectable-elements',
+  //'detectable-math',
+  'igt-elements',
 ]);
+
+export function watchImages() {
+  gulp.watch('src/*.png', {ignoreInitial: false}, compileimages);
+}
+
 
 export const watch = gulp.parallel(
   watchLibraries,
+  watchImages,
   watches.watchMarkdown,
   watches.watchScripts,
   watches.watchStyles,

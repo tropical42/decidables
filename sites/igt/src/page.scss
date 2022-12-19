@@ -350,6 +350,12 @@ $transition-duration: 500ms;
   font-size: 1rem;
 }
 
+table.decks {
+  td, th{
+    border: black 1px solid;
+    width: 15rem;
+  }
+}
 @include media-breakpoint-down(md) {
   .det-html {
     font-size: 0.9rem;

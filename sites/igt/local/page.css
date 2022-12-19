@@ -8294,6 +8294,11 @@ progress {
   font-size: 1rem;
 }
 
+table.decks td, table.decks th {
+  border: black 1px solid;
+  width: 15rem;
+}
+
 @media (max-width: 767.98px) {
   .det-html {
     font-size: 0.9rem;

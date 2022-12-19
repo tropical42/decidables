@@ -4,6 +4,23 @@ toc:
     nav: true
     pages:
       - {file: index, name: 'Home'}
+      - {file: introduction, name: 'Introduction'}
+  - section: model
+    nav: true
+    name: "Model"
+    pages:
+      - {file: exploration, name: 'Model Exploration'}
+      - {file: fitting, name: 'Model Fitting'}
+  - section: theory
+    nav: true
+    name: "Theory"
+    pages:
+      - {file: theory, name: 'Theory'}
+      - {file: additional_res, name: 'Additional Research'}
+  - section: conclusion
+    nav: true
+    pages:
+      - {file: conclusion, name: 'Conclusion'}
   - section: resources
     name: 'Resources'
     pages:
@@ -28,15 +45,15 @@ toc:
     %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="detectable: <%= title.replace(/<[^>]+>/g, '') %>">
-    <meta name="author" content="Dr. Adam Krawitz">
+    <meta name="description" content="IGT: <%= title.replace(/<[^>]+>/g, '') %>">
+    <meta name="author" content="Jack Novinger">
 
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
 
-    <title>d′etectable<%- (file !== 'index') ? `: ${windowTitle}` : '' %></title>
+    <title>IGT<%- (file !== 'index') ? `: ${windowTitle}` : '' %></title>
 
     <link href="page.css" rel="stylesheet">
   </head>
@@ -51,7 +68,7 @@ toc:
                 <%- include(resolvePkg('bootstrap-icons/icons/list.svg')) %>
               </button>
               <a class="det-nav-brand" href="index.html">
-                <span class="detectable"><span class="math-var d">d′</span>ete<span class="math-var c">c</span>table</span>
+                <span class="detectable">IGT</span>
               </a>
             </div>
             <nav class="det-nav-collapse collapse" id="det-nav">
